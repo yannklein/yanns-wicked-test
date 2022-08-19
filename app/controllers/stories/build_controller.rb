@@ -20,7 +20,7 @@ class Stories::BuildController < ApplicationController
 
   def update
     @story = Story.find(params[:story_id])
-    @story.status_active! if step == steps.last
+    @story.active! if step == steps.last
     @story.update(story_params)
     render_wizard @story
   end
