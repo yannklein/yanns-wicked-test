@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources :stories, only: [:update, :show, :index, :create] do
-    resources :step_flows, only: :show
+    resources :build, controller: 'stories/build'
   end
 end

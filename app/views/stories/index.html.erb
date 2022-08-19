@@ -1,6 +1,6 @@
 <div class="container">
   <h1>Stories</h1>
-  <%= simple_form_for @story do |f| %>
+  <%= simple_form_for @story, url: '/stories/wicked/build' do |f| %>
     <%= f.submit 'Create a story...', class: 'btn btn-primary'  %>
   <% end %>
   </div>
