@@ -8,7 +8,7 @@ class Stories::BuildController < ApplicationController
     @step_name = step
     case step
     when :a_terrific_enemy
-      @enemy_attribute = ["scary eyes", "bold head", "crooked hand", "picked tail"].shuffle
+      @enemy_name = ["Dark Vador", "Voldemor", "Palpatine", "Thanos"].sample
     end
     render_wizard
   end

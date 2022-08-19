@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <h1><%= @story.title %></h1>
+      <p>Once upon a time <strong><%= @story.hero %></strong> was wandering in the vals of <strong><%= @story.location %></strong>.</p>
+      <p>One day, our hero crossed the path of <strong><%= @story.enemy %></strong>, kicked that horrific person's ass and found a fabulous <strong><%= @story.treasure %></strong>.</p>
+      <p>Our hero learned to code and lived long ever after.</p>
+      <%= link_to "Back to stories", stories_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>

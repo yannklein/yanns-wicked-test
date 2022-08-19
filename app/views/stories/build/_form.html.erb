@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <h1><%= title %></h1>
+      <p><%= description %></p>
+      <%= simple_form_for @story, url: wizard_path do |f| %>
+        <%= f.input :"#{attribute}", input_html: {value: value} %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>

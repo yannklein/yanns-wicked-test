@@ -1,12 +1,5 @@
-<div class="container">
-  <div class="row">
-    <div class="col-6">
-      <h1>A cool title</h1>
-      <p>First, give us a cool title for the story</p>
-      <%= simple_form_for @story, url: wizard_path do |f| %>
-        <%= f.input :title %>
-        <%= f.submit %>
-      <% end %>
-    </div>
-  </div>
-</div>
+<%= render 'form', 
+title: "A cool title", 
+description: "First, give us a cool title for the story.",
+attribute: "title",
+value: "" %>
