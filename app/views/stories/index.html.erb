@@ -3,4 +3,9 @@
   <%= simple_form_for @story, url: '/stories/wicked/build' do |f| %>
     <%= f.submit 'Create a story...', class: 'btn btn-primary'  %>
   <% end %>
-  </div>
+  <ul>
+    <% @stories.each do |story| %>
+      <li><%= link_to story.title, story_build_path(story, :final_story) %></li>
+    <% end %>
+  </ul>
+</div>
