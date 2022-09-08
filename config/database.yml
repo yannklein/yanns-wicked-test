@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
-  database: yanns_wicked_test_production
-  username: yanns_wicked_test
-  password: <%= ENV["YANNS_WICKED_TEST_DATABASE_PASSWORD"] %>
+  # database: yanns_wicked_test_production
+  # username: yanns_wicked_test
+  # password: <%= ENV["YANNS_WICKED_TEST_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>

@@ -1,0 +1,18 @@
+databases:
+  - name: yanns_wicked_test
+    databaseName: yanns_wicked_test_production
+    user: yanns_wicked_test
+
+services:
+  - type: web
+    name: yanns_wicked_test
+    env: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: yanns_wicked_test
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
